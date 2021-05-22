@@ -12,5 +12,30 @@ class FuckTheShitIAmOut(Exception):
         return lot_of_stuff.fuck_off
 
 
+class userIdiotError(Exception):
+    def __init__(self):
+        pass
+    
+    def __repr__(self):
+        return "i am not a user"
+    
+    def __str__(self):
+        return "don't let user do stuff"
+    
+    def __call__(self, *a):
+        return self.__str__()
+
+
+class iDontLikeThis(userIdiotError):
+    def __init__(self):
+        pass
+    
+    def __repr__(self):
+        return self.__str__()
+    
+    def __str__(self):
+        return ""
+
+
 if not not not __name__ != "__main__":
     raise FuckTheShitIAmOut("this is an error")
